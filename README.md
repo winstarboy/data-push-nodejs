@@ -1,26 +1,34 @@
-# data-push-nodejs
 
-Pre-requisites
-Install Node.js version latest (LTS)
+## Installation
 
-Getting started
+Install data-push-nodejs with npm
 
-Clone the repository
+```bash
+  npm install my-project
+  cd my-project
+```
+## API - endpoints - http://localhost:8800
 
-git clone  <git lab template url> <project_name>
+### Account module - CRUD Endpoints
 
-Install dependencies
+Create Account - http://localhost:8800/accounts/save
 
-cd <project_name>
+Find One Account - http://localhost:8800/accounts/:accountId
 
-npm i
+Find All Accounts - http://localhost:8800/accounts/getAll
 
-Build and run the project
+Update Accounts - http://localhost:8800/accounts/update/:accountId
 
-npm start
+Delete Accounts - http://localhost:8800/accounts/delete/:accountId
 
-Navigate to http://localhost:8800
+### Destination module - CRUD Endpoints
 
-API Document endpoints
+Create Destination  - http://localhost:8800/destinations/save
 
-Data Pusher - http://localhost:8800/
+Find One destinations (accountId in query params) - http://localhost:8800/destinations/:accountId
+
+Find All destinations - http://localhost:8800/destinations/getAll
+
+Update destinations - http://localhost:8800/destinations/update/:destinationsId
+
+Delete destinations - http://localhost:8800/destinations/delete/:destinationsId
