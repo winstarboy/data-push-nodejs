@@ -1,4 +1,40 @@
 
+# Data Pusher NodeJs
+
+
+
+## Pre-requisites
+
+Install Node.js version latest (LTS)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
 ## Installation
 
 Install data-push-nodejs with npm
@@ -32,3 +68,14 @@ Find All destinations - http://localhost:8800/destinations/getAll
 Update destinations - http://localhost:8800/destinations/update/:destinationsId
 
 Delete destinations - http://localhost:8800/destinations/delete/:destinationsId
+
+
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
