@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "5a5ec2d2-f513-4436-a456-5e53baf0bdf4",
+		"name": "data pusher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19882850"
+	},
+	"item": [
+		{
+			"name": "Accounts save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\": \"kewin@gmail.com\",\r\n    \"accountName\": \"kewin\",\r\n    \"website\": \"www.kewin.showcase.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/accounts/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"accounts",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOne account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/accounts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"accounts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/accounts/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"accounts",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateOne account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\": \"keddy@gmail.com\",\r\n    \"accountName\": \"keddy\",\r\n    \"website\": \"www.keddy.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/accounts/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"accounts",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/accounts/delete/0f4097ce-f220-41e1-a5b2-32b829750fcd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"accounts",
+						"delete",
+						"0f4097ce-f220-41e1-a5b2-32b829750fcd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drop accounts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/accounts/drop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"accounts",
+						"drop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data pusher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cl-x-token",
+						"value": "MTcyZGE3NmMyMTRhODZkMmE5YWFiNTVmM2M4YWFiZTA5YTU3YTNlYjY1YjZiZjU5YzNhNTlhODc1OTNmZTViY2Y3Yjk3MWI5YzY0MzlkZTE5N2E5NTYwNWJjNmI4NTNi",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"msg\": \"Hello from Kewin\",\r\n    \"title\":\"Kewin 123\",\r\n    \"description\":\"Testing 123 Testing 123 Testing 123 Testing 123 Testing 123 Testing 123 Testing 123 Testing 123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/server/incoming_data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"server",
+						"incoming_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create destination - 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"http://localhost:8800/destinations/one/facebook\",\r\n    \"httpMethod\": \"POST\",\r\n    \"headers\": {\r\n        \"ACTION\": \"user.post\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Accept\": \"*\"\r\n    },\r\n    \"accountId\":\"9a4403f0-91ef-46c1-a0d5-2d054ad5c81f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/destinations/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"destinations",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create destination - 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"http://localhost:8800/destinations/one/facebook\",\r\n    \"httpMethod\": \"POST\",\r\n    \"headers\": {\r\n        \"ACTION\": \"user.update\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Accept\": \"*\"\r\n    },\r\n    \"accountId\":\"466e8fa9-2600-4f36-a0a7-d3568d554d18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/destinations/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"destinations",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find destination on accountId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/destinations/getAll/9a4403f0-91ef-46c1-a0d5-2d054ad5c81f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"destinations",
+						"getAll",
+						"9a4403f0-91ef-46c1-a0d5-2d054ad5c81f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all destination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/destinations/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"destinations",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find destination by destinationId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/destinations/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"destinations",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update destination",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"http://localhost:8800/destinations/one/discord\",\r\n    \"httpMethod\": \"POST\",\r\n    \"headers\": {\r\n        \"ACTION\": \"user.post\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Accept\": \"*\"\r\n    },\r\n    \"accountId\":\"9a4403f0-91ef-46c1-a0d5-2d054ad5c81f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/destinations/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"destinations",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete destination",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"http://localhost:8800/destinations/one/discord\",\r\n    \"httpMethod\": \"POST\",\r\n    \"headers\": {\r\n        \"ACTION\": \"user.post\",\r\n        \"Content-Type\": \"application/json\",\r\n        \"Accept\": \"*\"\r\n    },\r\n    \"accountId\":\"9a4403f0-91ef-46c1-a0d5-2d054ad5c81f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/destinations/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"destinations",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
